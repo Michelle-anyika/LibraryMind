@@ -12,25 +12,41 @@ The system is built from the ground up prioritizing absolute resilience, data in
 The application implements a decoupled, four-tier layered architecture to isolate responsibilities, maximize system throughput, and ensure independent testability across modules.
 ## Architecture
 
-```mermaid
-flowchart TD
-    A[Patron / API Client] --> B[API Layer]
-
-    B --> C[Service Layer]
-    C --> D[AI Provider Layer]
-    D --> E[Infrastructure Layer]
-
-    B:::api
-    C:::service
-    D:::provider
-    E:::infra
-
-    classDef api fill:#e3f2fd,stroke:#1565c0;
-    classDef service fill:#e8f5e9,stroke:#2e7d32;
-    classDef provider fill:#fff3e0,stroke:#ef6c00;
-    classDef infra fill:#f3e5f5,stroke:#6a1b9a;
-```
-
+┌─────────────────────────┐
+│     Patron / Client     │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────────────────────────────────┐
+│                    API Layer                        │
+│  • FastAPI Routing                                  │
+│  • Request Validation (Pydantic)                    │
+│  • CORS & Middleware                                │
+└─────────────────────┬───────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────┐
+│                  Service Layer                      │
+│  • Retrieval-Augmented Generation (RAG)            │
+│  • Conversation Memory Management                   │
+│  • JSON Classification & Processing                 │
+└─────────────────────┬───────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────┐
+│               AI Provider Layer                     │
+│  • Multi-Provider Orchestration                     │
+│  • Failover & Resilience                            │
+│  • Model Selection & Routing                        │
+└─────────────────────┬───────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────┐
+│               Infrastructure Layer                  │
+│  • Redis Cache                                      │
+│  • ChromaDB Vector Store                            │
+│  • Token-Bucket Rate Limiting                       │
+└─────────────────────────────────────────────────────┘
 ###  Architectural Blueprint
 * **Layer 1: API Layer (FastAPI):** Exposes high-performance, asynchronous REST endpoints with zero embedded business logic. Enforces strict input schema compilation via Pydantic.
 * **Layer 2: Service Layer:** Houses the core orchestration processing engines—including the sliding-window conversational chat memory tracker, multi-sentence semantic embedder, and text formatting wrappers.
