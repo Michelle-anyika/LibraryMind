@@ -10,28 +10,26 @@ The system is built from the ground up prioritizing absolute resilience, data in
 ##  System Architecture
 
 The application implements a decoupled, four-tier layered architecture to isolate responsibilities, maximize system throughput, and ensure independent testability across modules.
-[ Patron / API Client ]
-              │
-              ▼
-┌───────────────────────────────────┐
-│           1. API Layer            │ ◄── FastAPI (Routing, Pydantic Validation, CORS)
-└─────────────────┬─────────────────┘
-│
-▼
-┌───────────────────────────────────┐
-│         2. Service Layer          │ ◄── RAG, Chatbot Memory, JSON Classifiers
-└─────────────────┬─────────────────┘
-│
-▼
-┌───────────────────────────────────┐
-│     3. AI Provider Layer          │ ◄── Multi-Provider Resilience Orchestrator
-└─────────────────┬─────────────────┘
-│
-▼
-┌───────────────────────────────────┐
-│      4. Infrastructure Layer      │ ◄── Redis Cache, ChromaDB, Token-Bucket Limiter
-└───────────────────────────────────┘
+## Architecture
 
+```mermaid
+flowchart TD
+    A[Patron / API Client] --> B[API Layer]
+
+    B --> C[Service Layer]
+    C --> D[AI Provider Layer]
+    D --> E[Infrastructure Layer]
+
+    B:::api
+    C:::service
+    D:::provider
+    E:::infra
+
+    classDef api fill:#e3f2fd,stroke:#1565c0;
+    classDef service fill:#e8f5e9,stroke:#2e7d32;
+    classDef provider fill:#fff3e0,stroke:#ef6c00;
+    classDef infra fill:#f3e5f5,stroke:#6a1b9a;
+```
 
 ###  Architectural Blueprint
 * **Layer 1: API Layer (FastAPI):** Exposes high-performance, asynchronous REST endpoints with zero embedded business logic. Enforces strict input schema compilation via Pydantic.
