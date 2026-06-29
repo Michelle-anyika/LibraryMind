@@ -11,8 +11,8 @@ openai==2.43.0
 anthropic==0.111.0
 google-generativeai==0.8.3
 
-# Vector database  (requires pre-built wheels — skip on Python 3.14+ until wheels exist)
-# chromadb==0.5.23
+# Vector database
+chromadb==0.5.23
 
 # Caching
 redis==5.2.1

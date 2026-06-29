@@ -1,0 +1,178 @@
+[
+  {
+    "id": "book-001",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "year": 1965,
+    "genre": "sci-fi",
+    "description": "Set on the desert planet Arrakis, Dune follows young Paul Atreides as his family assumes stewardship of the most valuable substance in the universe — the spice melange. When betrayal strips him of everything, Paul must survive among the native Fremen and harness powers he barely understands. A sweeping epic that interweaves ecology, religion, politics, and prophecy into one of the greatest science fiction novels ever written."
+  },
+  {
+    "id": "book-002",
+    "title": "Foundation",
+    "author": "Isaac Asimov",
+    "year": 1951,
+    "genre": "sci-fi",
+    "description": "Mathematician Hari Seldon has used psychohistory to predict the fall of the Galactic Empire and a thirty-thousand-year dark age. To shorten that chaos to a single millennium, he establishes two Foundations at opposite ends of the galaxy. This landmark novel explores how science, knowledge, and civilisation can survive the collapse of empire through long-range planning across generations."
+  },
+  {
+    "id": "book-003",
+    "title": "Neuromancer",
+    "author": "William Gibson",
+    "year": 1984,
+    "genre": "sci-fi",
+    "description": "Washed-up console cowboy Case is hired by a mysterious employer to pull off the ultimate hack. Set in a neon-drenched cyberpunk future of corporate arcologies and virtual reality cyberspace, Neuromancer invented the aesthetic of the digital age. It follows Case and mercenary Molly through a conspiracy that reaches into artificial intelligence, orbital colonies, and the nature of consciousness itself."
+  },
+  {
+    "id": "book-004",
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "year": 2011,
+    "genre": "sci-fi",
+    "description": "Astronaut Mark Watney is presumed dead and left behind on Mars after a fierce storm forces his crew to evacuate. Armed with only his ingenuity, botanical training, and dark humour, he must figure out how to signal Earth, grow food in a habitat not designed for farming, and survive long enough for a rescue mission. A gripping, science-accurate survival story told through wry mission logs."
+  },
+  {
+    "id": "book-005",
+    "title": "Ender's Game",
+    "author": "Orson Scott Card",
+    "year": 1985,
+    "genre": "sci-fi",
+    "description": "Brilliant child Andrew 'Ender' Wiggin is drafted into an orbiting battle school where children are trained through increasingly brutal war games to become commanders against an alien insect threat. The novel asks hard questions about the ethics of using children as weapons and the nature of empathy in warfare, climaxing in a twist that reframes everything that came before."
+  },
+  {
+    "id": "book-006",
+    "title": "Hyperion",
+    "author": "Dan Simmons",
+    "year": 1989,
+    "genre": "sci-fi",
+    "description": "Seven pilgrims journey to the distant world of Hyperion, home to the mysterious Time Tombs and their terrifying guardian the Shrike, a creature of blades that moves backwards through time. Structured like The Canterbury Tales, each pilgrim shares a story that reveals a different facet of an interstellar civilisation on the brink of war. Rich with literary allusion and genuine dread."
+  },
+  {
+    "id": "book-007",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "year": 1813,
+    "genre": "classic romance",
+    "description": "The spirited Elizabeth Bennet navigates the marriage market of Regency England while sparring with the seemingly arrogant and proud Mr Darcy. Their witty antagonism masks a growing mutual respect and attraction. Austen's razor-sharp social satire exposes class prejudice, the economic pressures facing women, and the folly of first impressions through some of literature's most beloved characters."
+  },
+  {
+    "id": "book-008",
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "year": 1847,
+    "genre": "classic romance",
+    "description": "Orphaned and plain, Jane Eyre survives a harsh childhood to become a governess at brooding Thornfield Hall, where she falls in love with her employer, the mysterious Edward Rochester. But Thornfield hides a terrible secret that will test Jane's principles and independence. A landmark novel of passion, conscience, and a woman refusing to surrender her moral self to anyone."
+  },
+  {
+    "id": "book-009",
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "year": 1847,
+    "genre": "classic romance",
+    "description": "The brooding foundling Heathcliff and the wild, free-spirited Catherine Earnshaw share an elemental bond forged on the windswept Yorkshire moors. When class and pride drive them apart, Heathcliff's consuming obsession poisons two generations. A gothic novel of savage romantic passion, social cruelty, and revenge that transcends ordinary love stories into something darker and more mythic."
+  },
+  {
+    "id": "book-010",
+    "title": "Sense and Sensibility",
+    "author": "Jane Austen",
+    "year": 1811,
+    "genre": "classic romance",
+    "description": "After their father's death, the Dashwood sisters face genteel poverty. Elinor embodies sense — she restrains her feelings and navigates society with careful propriety. Marianne embodies sensibility — she wears her heart openly and courts disaster through a passionate attachment to the dashing Willoughby. Austen contrasts the two sisters to explore how women can find happiness without sacrificing either heart or head."
+  },
+  {
+    "id": "book-011",
+    "title": "The Girl with the Dragon Tattoo",
+    "author": "Stieg Larsson",
+    "year": 2005,
+    "genre": "thriller",
+    "description": "Disgraced journalist Mikael Blomkvist is hired to investigate a forty-year-old disappearance within the powerful Vanger industrial dynasty. He is joined by Lisbeth Salander, a brilliant but deeply damaged hacker with a photographic memory and her own violent history. Together they uncover a dark conspiracy involving serial murder, corporate corruption, and secrets buried for decades in the Swedish snow."
+  },
+  {
+    "id": "book-012",
+    "title": "Gone Girl",
+    "author": "Gillian Flynn",
+    "year": 2012,
+    "genre": "thriller",
+    "description": "On the morning of their fifth wedding anniversary, Nick Dunne's wife Amy goes missing. The media circus that follows turns him into the prime suspect. Told in alternating voices — Nick's present-day account and Amy's diary entries — the novel spirals into an unsettling portrait of a marriage defined by performance, manipulation, and mutual destruction. A razor-sharp dissection of modern relationships and media spectacle."
+  },
+  {
+    "id": "book-013",
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "year": 2003,
+    "genre": "thriller",
+    "description": "Harvard symbologist Robert Langdon is called to the Louvre after a murder leaves a cryptic message in the dead man's own blood. The trail leads through centuries of hidden history, secret societies, and suppressed religious truths encoded in great works of art. A fast-paced puzzle thriller that mixes art history, cryptography, and conspiracy into a globe-spanning mystery."
+  },
+  {
+    "id": "book-014",
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "year": 2019,
+    "genre": "thriller",
+    "description": "Alicia Berenson, a celebrated painter, shoots her husband five times in the face and then never speaks another word. Criminal psychotherapist Theo Faber becomes obsessed with uncovering her motive, convinced that her silence conceals something extraordinary. Set in a secure psychiatric unit in London, this debut novel weaves between Alicia's diary and Theo's investigation toward a devastating twist ending."
+  },
+  {
+    "id": "book-015",
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "year": 2011,
+    "genre": "history",
+    "description": "Harari sweeps through the entire history of the human species from the emergence of Homo sapiens in Africa to the present day, arguing that what made us dominant was the uniquely human ability to believe in shared fictions — money, nations, gods, and human rights. Provocative and accessible, it connects cognitive science, economics, and anthropology to retell the story of how we came to rule the world."
+  },
+  {
+    "id": "book-016",
+    "title": "The Guns of August",
+    "author": "Barbara Tuchman",
+    "year": 1962,
+    "genre": "history",
+    "description": "Tuchman's Pulitzer Prize-winning narrative history reconstructs the opening month of World War One with the dramatic intensity of a novel. She traces the miscalculations, rigid military timetables, and cascading blunders that turned a regional assassination into a continental catastrophe. A masterpiece of historical writing that shows how institutional inertia can overrule common sense even when leaders can see the abyss ahead."
+  },
+  {
+    "id": "book-017",
+    "title": "1776",
+    "author": "David McCullough",
+    "year": 2005,
+    "genre": "history",
+    "description": "McCullough focuses on a single pivotal year when George Washington's ragged Continental Army was repeatedly outmatched, outgunned, and nearly destroyed by the British. Through vivid narrative built on primary sources, he reconstructs the desperate retreats, surprise crossings of the Delaware, and unlikely victories that kept the American Revolution alive. A gripping account of fortitude and leadership under impossible odds."
+  },
+  {
+    "id": "book-018",
+    "title": "The Silk Roads: A New History of the World",
+    "author": "Peter Frankopan",
+    "year": 2015,
+    "genre": "history",
+    "description": "Frankopan recentres world history away from Western Europe toward the ancient trade routes linking China, Persia, Arabia, and Rome. He argues that the real engine of civilisation has always been the exchange of silk, spices, gold, and ideas along the routes connecting Asia and Europe. A sweeping reinterpretation that makes familiar events look entirely different when viewed from the perspective of the East."
+  },
+  {
+    "id": "book-019",
+    "title": "Long Walk to Freedom",
+    "author": "Nelson Mandela",
+    "year": 1994,
+    "genre": "biography",
+    "description": "Nelson Mandela's autobiography traces his journey from a rural Xhosa childhood through his radicalisation as a young lawyer, his leadership of the ANC, twenty-seven years of imprisonment on Robben Island, and finally his emergence as the father of a democratic South Africa. Written partly in secret while incarcerated, it stands as a testament to the human capacity for dignity, forgiveness, and political will."
+  },
+  {
+    "id": "book-020",
+    "title": "The Diary of a Young Girl",
+    "author": "Anne Frank",
+    "year": 1947,
+    "genre": "biography",
+    "description": "Between 1942 and 1944, Jewish teenager Anne Frank kept a diary while hiding with her family in a concealed apartment in Nazi-occupied Amsterdam. Her entries record the ordinary struggles of adolescence — identity, love, ambition, family tension — alongside the extraordinary terror of the Holocaust closing in from outside. One of the most profound documents of the twentieth century, published posthumously by her father."
+  },
+  {
+    "id": "book-021",
+    "title": "Educated",
+    "author": "Tara Westover",
+    "year": 2018,
+    "genre": "biography",
+    "description": "Tara Westover grew up in the mountains of Idaho in a survivalist family that distrusted government, medicine, and formal schooling. She had never set foot in a classroom before she taught herself enough to pass the ACT and enter Brigham Young University. Her memoir follows her transformation from a girl with no birth certificate to a PhD from Cambridge, at the cost of her family and the story she was raised to believe about herself."
+  },
+  {
+    "id": "book-022",
+    "title": "Becoming",
+    "author": "Michelle Obama",
+    "year": 2018,
+    "genre": "biography",
+    "description": "The former First Lady of the United States tells her story from a working-class childhood on Chicago's South Side, through Princeton and Harvard Law, a career in public service, and eight years in the White House. Candid and warmly written, Becoming explores race, ambition, marriage, motherhood, and the peculiar pressures of living the most scrutinised life in the world while trying to remain authentically yourself."
+  }
+]
