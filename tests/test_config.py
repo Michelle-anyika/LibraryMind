@@ -23,7 +23,7 @@ class IsolatedSettings(Settings):
     )
 
 
-_PROVIDER_KEYS = ("AMALITECH_API_KEY", "ANTHROPIC_API_KEY", "GOOGLE_API_KEY")
+_PROVIDER_KEYS = ("AMALITECH_API_KEY",)
 
 
 @pytest.fixture(autouse=True)
@@ -40,16 +40,6 @@ def test_loads_with_amalitech_key():
     assert s.amalitech_api_key == "test-key-123"
 
 
-def test_loads_with_anthropic_key():
-    s = IsolatedSettings(anthropic_api_key="sk-ant-test")
-    assert s.anthropic_api_key == "sk-ant-test"
-
-
-def test_loads_with_google_key():
-    s = IsolatedSettings(google_api_key="AIza-test")
-    assert s.google_api_key == "AIza-test"
-
-
 def test_defaults_are_correct():
     s = IsolatedSettings(amalitech_api_key="any-key")
     assert s.primary_provider == "openai"
@@ -57,12 +47,6 @@ def test_defaults_are_correct():
     assert s.redis_port == 6379
     assert s.rate_limit_per_minute == 60
     assert s.relevance_threshold == 0.70
-
-
-def test_multiple_providers_accepted():
-    s = IsolatedSettings(amalitech_api_key="key-a", anthropic_api_key="key-b")
-    assert s.amalitech_api_key == "key-a"
-    assert s.anthropic_api_key == "key-b"
 
 
 # ── Failure path ──────────────────────────────────────────────────────────────
@@ -73,13 +57,13 @@ def test_raises_when_no_provider_key_set():
     assert "Boot failed" in str(exc_info.value)
 
 
-def test_raises_when_keys_are_empty_strings():
+def test_raises_when_key_is_empty_string():
     with pytest.raises(ValidationError) as exc_info:
-        IsolatedSettings(amalitech_api_key="", anthropic_api_key="", google_api_key="")
+        IsolatedSettings(amalitech_api_key="")
     assert "Boot failed" in str(exc_info.value)
 
 
-def test_raises_when_keys_are_whitespace():
+def test_raises_when_key_is_whitespace():
     with pytest.raises(ValidationError) as exc_info:
         IsolatedSettings(amalitech_api_key="   ")
     assert "Boot failed" in str(exc_info.value)

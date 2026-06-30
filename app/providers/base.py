@@ -66,14 +66,22 @@ class BaseAIProvider(ABC):
 class _AmaliCompatibleProvider(BaseAIProvider):
     """
     Shared implementation for all AmaliTech-proxied providers.
-    All three vendors (OpenAI, Claude, Gemini) are reachable through the
-    same OpenAI-compatible gateway — they differ only in model name.
+    All vendors are reached through the same /api/v2/public/** gateway.
+    The Provider header tells the proxy which upstream LLM to route to.
     """
 
-    _default_model: str  # set by each concrete subclass
+    _default_model: str   # set by each concrete subclass
+    _provider_header: str = "openai"  # overridden by ClaudeProvider
 
     def __init__(self, api_key: str, base_url: str, model: str | None = None) -> None:
-        self._client = openai.AsyncOpenAI(api_key=api_key, base_url=base_url)
+        self._client = openai.AsyncOpenAI(
+            api_key=api_key,
+            base_url=base_url,
+            default_headers={
+                "X-Api-Key": api_key,
+                "Provider": self._provider_header,
+            },
+        )
         self.model = model or self._default_model
 
     async def generate(

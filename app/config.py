@@ -15,11 +15,9 @@ class Settings(BaseSettings):
     # AI provider selection
     primary_provider: str = "openai"
 
-    # Provider keys
+    # AmaliAI gateway — the single entry point for all AI providers
     amalitech_api_key: Optional[str] = None
     openai_api_base: Optional[str] = None
-    anthropic_api_key: Optional[str] = None
-    google_api_key: Optional[str] = None
 
     # Infrastructure
     redis_host: str = "localhost"
@@ -28,12 +26,10 @@ class Settings(BaseSettings):
     relevance_threshold: float = 0.70
 
     @model_validator(mode="after")
-    def require_at_least_one_provider_key(self) -> "Settings":
-        keys = [self.amalitech_api_key, self.anthropic_api_key, self.google_api_key]
-        if not any(k for k in keys if k and k.strip()):
+    def require_amalitech_key(self) -> "Settings":
+        if not self.amalitech_api_key or not self.amalitech_api_key.strip():
             raise ValueError(
-                "Boot failed: set at least one provider key — "
-                "AMALITECH_API_KEY, ANTHROPIC_API_KEY, or GOOGLE_API_KEY"
+                "Boot failed: AMALITECH_API_KEY must be set in .env"
             )
         return self
 

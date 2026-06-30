@@ -37,15 +37,13 @@ Create a `.env` file in the project root:
 PRIMARY_PROVIDER=openai
 AMALITECH_API_KEY=your_production_api_key_here
 OPENAI_API_BASE=API_link_here
-ANTHROPIC_API_KEY=
-GOOGLE_API_KEY=
 REDIS_HOST=localhost
 REDIS_PORT=6379
 RATE_LIMIT_PER_MINUTE=60
 RELEVANCE_THRESHOLD=0.70
 ```
 
-Redis is optional — the app degrades gracefully to in-memory passthrough when unavailable. At least two AI provider keys must be configured for fallback to work.
+Redis is optional — the app degrades gracefully to in-memory passthrough when unavailable. All AI providers (OpenAI, Claude, Gemini) are accessed through the single AmaliAI gateway using `AMALITECH_API_KEY`.
 
 ## Architecture
 
