@@ -1,0 +1,33 @@
+# Secrets — injected at runtime via env_file, never baked into the image
+.env
+.env.*
+
+# Git history
+.git/
+.gitignore
+
+# Python bytecode
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Test runner cache
+.pytest_cache/
+
+# Local virtual environments
+venv/
+.venv/
+env/
+
+# ChromaDB local data — managed as a Docker named volume
+chroma_db/
+*.sqlite3
+
+# Test suite not needed in the production image
+tests/
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,57 @@
+services:
+
+  # ── Redis ───────────────────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  # ── Main API ────────────────────────────────────────────────────────────────
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env                  # AMALITECH_API_KEY, OPENAI_API_BASE, etc.
+    environment:
+      REDIS_HOST: redis       # override host to use the Docker service name
+      REDIS_PORT: "6379"
+    depends_on:
+      redis:
+        condition: service_healthy
+    volumes:
+      - chroma_data:/app/chroma_db   # persist vector store across restarts
+    restart: unless-stopped
+
+  # ── One-off seed job ────────────────────────────────────────────────────────
+  # Run once before first launch:
+  #   docker compose --profile seed run --rm seeder
+  seeder:
+    build: .
+    command: python seed.py
+    env_file:
+      - .env
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+    depends_on:
+      redis:
+        condition: service_healthy
+    volumes:
+      - chroma_data:/app/chroma_db
+    profiles:
+      - seed
+    restart: "no"
+
+# ── Named volumes ────────────────────────────────────────────────────────────
+volumes:
+  chroma_data:    # ChromaDB embeddings survive container rebuilds
+  redis_data:     # Redis cache survives container restarts

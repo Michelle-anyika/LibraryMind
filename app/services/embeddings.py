@@ -22,7 +22,14 @@ class EmbeddingService:
         cache: CacheService,
         model: str = "text-embedding-3-small",
     ) -> None:
-        self._client = openai.AsyncOpenAI(api_key=api_key, base_url=base_url)
+        self._client = openai.AsyncOpenAI(
+            api_key=api_key,
+            base_url=base_url,
+            default_headers={
+                "X-Api-Key": api_key,
+                "Provider": "openai",
+            },
+        )
         self._cache = cache
         self._model = model
 
